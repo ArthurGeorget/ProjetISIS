@@ -1,17 +1,16 @@
-#include "WavDecoder.h"
+#include "WavDecoder.hpp"
 #include <iostream>
 
-using namespace std;
-
-WavDecoder::WavDecoder():AudioDecoder() // Définition du constructeur de WavDecoder héritant du constructeur AudioDecoder
+WavDecoder::WavDecoder()
+	: AudioDecoder()
 {
-
 }
-WavDecoder::~WavDecoder():~AudioDecoder()
-{
 
-}
-void WavDecoder::decode(char* data)
+WavDecoder::~WavDecoder()
 {
-		cout << data;
+}
+
+void WavDecoder::decode(DataFrame& data)
+{
+	data.size = 50;
 }

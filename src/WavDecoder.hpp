@@ -1,14 +1,15 @@
-#ifndef WAVDECODER_H_INCLUDED    // Empeche le compilateur d'inclure plusieurs fois le fichier
-#define WAVDECODER_H_INCLUDED
+#ifndef _AUDIO_TRANSFORM_WAV_DECODER_HPP_
+#define _AUDIO_TRANSFORM_WAV_DECODER_HPP_
 
-#include "AudioDecoder.h"
+#include "AudioDecoder.hpp"
 
 class WavDecoder : public AudioDecoder
 {
-	public:
-			WavDecoder(){};
-			~WavDecoder(){};
-			void decode(char* data){};
+public:
+	WavDecoder();
+	~WavDecoder();
+
+	void decode(DataFrame& data);
 };
 
-#endif // WAVDECODER_H_INCLUDED
+#endif
